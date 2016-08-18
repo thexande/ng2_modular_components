@@ -1,3 +1,10 @@
 <h1>
   {{title}}
 </h1>
+<div class="container">
+  <h4>Like Button</h4>
+  <app-like (change)="onLikeChange($event)"></app-like>
+  <br>
+  <h4>Voting Count</h4>
+  <app-vote></app-vote>
+</div>
