@@ -4,15 +4,24 @@ import { Component, OnInit, Input, Output } from '@angular/core';
   moduleId: module.id,
   selector: 'app-vote',
   template: `
-    <i class="glyphicon glyphicon-chevron-up" (click)="upVote()" [class.vote]="isUpVote"></i>
-    <h2>{{ totalVotes }}</h2>
-    <i class="glyphicon glyphicon-chevron-down" (click)="downVote()" [class.vote]="isDownVote"></i>
+  <div class="votecontainer">
+    <div class="row"><i class="glyphicon glyphicon-chevron-up" (click)="upVote()" [class.vote]="isUpVote"></i></div>
+    <div class="row votecount">{{ totalVotes }}</div>
+    <div class="row"><i class="glyphicon glyphicon-chevron-down" (click)="downVote()" [class.vote]="isDownVote"></i></div>
+    </div>
   `,
+
   styles: [`.glyphicon {
               font-size: 2em;
           }
             .vote {
               color: gold;
+            }
+            .votecount{
+              text-align:center;
+            }
+            .votecontainer{
+              width: 0vw;
             }
           `]
   // templateUrl: 'vote.component.html',
